@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #2e4053;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #eaeded;
+  padding: 2rem;
+}
+
+.game-instructions {
+  background-color: #34495e;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-right: 2rem;
+  max-width: 30rem;
+  text-align: left;
+  color: #eaeded;
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+}
+
+.game-instructions h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f7dc6f;
+}
+
+.game-instructions ol {
+  font-size: 1.5rem;
+  list-style-position: inside;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1c2833;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.game-title {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: #f7dc6f;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.game-winner {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #f7dc6f;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.game-board {
+  display: flex;
+  width: 80rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.player {
+  flex: 1;
+  padding: 2rem;
+  background-color: #34495e;
+  border-radius: 10px;
+  margin: 0 1rem;
+  text-align: center;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.player--active {
+  background-color: #1abc9c;
+}
+
+.player-name {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #eaeded;
+}
+
+.player-score {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #f7dc6f;
+  margin-bottom: 1rem;
+}
+
+.player-current {
+  background-color: #f7dc6f;
+  color: #34495e;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.player-current-label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.player-current-score {
+  font-size: 2rem;
+}
+
+.game-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.dice {
+  height: 10rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  background-color: #1abc9c;
+  color: #eaeded;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #16a085;
+}
+
+.btn--new-game {
+  margin-top: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.player--winner {
+  background-color: #27ae60;
+}
+
+.player--winner .player-name,
+.player--winner .player-score {
+  color: #eaeded;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  .game-board {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .player {
+    margin: 1rem 0;
+  }
+
+  .game-instructions {
+    position: static;
+    margin: 2rem 0;
+    max-width: 100%;
+  }
+}
